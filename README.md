@@ -5,7 +5,7 @@
 python -m venv venv
 poetry install
 python app/cli.py init_db
-uvicorn app.main:app --reload
+uvicorn app:app --reload
 # In another tab
 ./start.sh # to generate users, which will automatically be synced between read and write tables
 ```
