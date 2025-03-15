@@ -1,11 +1,19 @@
 from pydantic import BaseModel
 
+
 class UserBase(BaseModel):
     name: str
     email: str
 
+
 class UserCreate(UserBase):
     pass
+
+
+class UserUpdate(BaseModel):
+    name: str
+    email: str
+
 
 class UserResponse(UserBase):
     id: int
